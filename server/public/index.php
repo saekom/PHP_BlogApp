@@ -32,7 +32,7 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			<a href="show.php?id=<?php echo h($post['id']); ?>"><?php echo $post["title"] . '<br>' ?></a>
 			<?php echo $post["body"] . '<br>' ?>		
 			<?php echo '投稿日時: ' . $post["created_at"] . '<br>' ?>	
-			[<a href="edit.php?id=<?php echo h($post['id']); ?>">編集</a>][<a href="#">削除</a>]
+			[<a href="edit.php?id=<?php echo h($post['id']); ?>">編集</a>][<a href="delete.php?id=<?php echo h($post['id']); ?>">削除</a>]
 			<hr>
 		</li>
 	</ul>
