@@ -40,7 +40,8 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
 		</div>
 		<div>
 			<?php echo '投稿日時: ' . $post["created_at"] . '<br>' ?>	
-		</div>	
+		</div>
+		[<a href="edit.php?id=<?php echo h($post['id']); ?>">編集</a>][<a href="delete.php?id=<?php echo h($post['id']); ?>">削除</a>]
 	</form>
 
 	<a href="/index.php"><< 戻る</a>
